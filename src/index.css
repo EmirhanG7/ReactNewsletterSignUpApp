@@ -1,12 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-
 :root {
   --Dark-Navy:#242742;
   --grey-25:rgba(25, 24, 43, 0.25);
 }
-
-
 
 * {
   margin: 0;
@@ -19,19 +16,17 @@ body {
   background-color: #242742;
 }
 
-
 .container {
+  width: 100%;
   margin: 0 auto;
-  max-width: 1440px;
-  padding: 64px 200px;
+  padding: 120px 176px;
 }
 
 .hero {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
-  padding: 64px;
+  justify-content: space-between;
+  padding: 0 64px;
   border-radius: 36px;
   background: #FFF;
   box-shadow: 0px 15px 60px 0px rgba(0, 0, 0, 0.25);
@@ -41,6 +36,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 24px;
+
   & h1 {
     color: var(--Dark-Navy, #242742);
     font-feature-settings: 'clig' off, 'liga' off;
@@ -64,6 +60,7 @@ body {
 .subscribes {
   display: flex;
   flex-direction: column;
+
   & h5 {
     margin-bottom: 8px;
     color: var(--Dark-Navy, #242742);
@@ -74,6 +71,7 @@ body {
     font-weight: 700;
     line-height: 150%;
   }
+
   & input {
     cursor: pointer;
     margin-bottom: 24px;
@@ -88,6 +86,7 @@ body {
     font-size: 16px;
     font-weight: 700;
     line-height: 150%;
+
     &:hover {
       border-radius: 8px;
       background: linear-gradient(204deg, #FF6A3A 0%, #FF527B 100%);
@@ -115,8 +114,14 @@ body {
 }
 
 .bgImg {
-  padding: 24px;
-
+  padding: 24px 0;
+  width: 400px;
+  & .desktop {
+    display: block;
+  }
+  & .mobile {
+    display: none;
+  }
 }
 
 .subscribingPage {
@@ -126,9 +131,11 @@ body {
   width: 504px;
   padding: 64px;
   margin: 0 auto;
+
   & img {
     margin-bottom: 40px;
   }
+
   & h1 {
     margin-bottom: 24px;
     color: var(--Dark-Navy, #242742);
@@ -138,7 +145,8 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: 100%; /* 56px */
-      }
+  }
+
   & p {
     margin-bottom: 40px;
     color: var(--Dark-Navy, #242742);
@@ -148,10 +156,12 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 24px */
+
     & b {
       cursor: pointer;
     }
   }
+
   & button {
     cursor: pointer;
     padding: 14px 122px;
@@ -169,5 +179,122 @@ body {
       box-shadow: 0px 16px 32px 0px rgba(255, 97, 85, 0.50);
     }
   }
+}
 
+@media (width < 400px) {
+  .container {
+    width: 100%;
+    padding: 0 0 20px 0;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+
+  .bgImg {
+    padding: 0;
+    margin-bottom: 40px;
+    
+    & .desktop {
+      display: none;
+    }
+    & .mobile {
+      display: block;
+      border-radius: 32px;
+      width: 400px;
+      margin: 0 auto;
+    }
+  }
+
+  .header {
+    width: 100%;
+  }
+
+
+  .headerInfos {
+
+    padding: 0 25px;
+
+    & h1 {
+      color: var(--Dark-Navy, #242742);
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-family: Roboto;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 100%; /* 40px */
+    }
+
+    & p {
+      color: var(--Dark-Navy, #242742);
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-family: Roboto;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 24px */
+    }
+  }
+
+  .infos p {
+    color: var(--Dark-Navy, #242742);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+  }
+
+  .subscribes {
+    padding: 0 25px;
+    margin-bottom: 40px;
+
+    & h5 {
+      margin-top: 40px;
+    }
+    & .inputemail {
+      padding: 16px;
+      width: 100%;
+    }
+
+    & button {
+      padding: 16px 48px;
+    }
+  }
+
+  .subscribingPage {
+    width: 390px;
+    margin-top: 149px;
+    margin: 0;
+    padding: 149px 24px 40px 24px;
+
+    & h1 {
+      color: var(--Dark-Navy, #242742);
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-family: Roboto;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 100%; /* 40px */
+    }
+
+    & p {
+      color: var(--Dark-Navy, #242742);
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-family: Roboto;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 24px */
+      margin-bottom: 263px;
+    }
+
+    & button {
+      width: 327px;
+      height: 56px;
+      padding: 0;
+    }
+  }
 }
