@@ -22,8 +22,8 @@ export default function App() {
                 <Subscribe email={email} setEmail={setEmail} isFormSubmitted={isFormSubmitted} setFormSubmit={setFormSubmit}/>
               </div>
               <div className="bgImg">
-                <img className="desktop" src="./src/assets/Img/mainPageImg.png" alt="Main Page Img" />
-                <img className="mobile" src="./src/assets/Img/mainPageImgMobile.jpg" alt="Main Page Img" />
+                <img className="desktop" src="/image/mainPageImg.png" alt="Main Page Img" />
+                <img className="mobile" src="/image/mainPageImgMobile.jpg" alt="Main Page Img" />
               </div>
             </div>
         }

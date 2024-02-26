@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Subscribe({ email, setEmail, isFormSubmitted, setFormSubmit }) {
+export default function Subscribe({ email, setEmail, setFormSubmit }) {
     const [isFormEntered, setFormEntered] = useState(false)
 
     function handleSubmit(e) {
@@ -16,16 +16,7 @@ export default function Subscribe({ email, setEmail, isFormSubmitted, setFormSub
         setFormSubmit(true)
     }
 
-    function handleSearch(e) {
-        e.preventDefault()
-        if (e.target.searchInput.value === "") {
-            setError(true)
-            return
-        }
-        setSearchWord(e.target.searchInput.value)
-        setError(false)
-    }
-
+   
 
     console.log(email)
 
